@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# PROYECTO PARA DOS ESTUDIANTES
 
-## Getting Started
+**Fecha de Entrega:** Marzo 21 de 2024
 
-First, run the development server:
+**Cliente:** La Granja S.A.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Descripción del Proyecto
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+La Granja S.A., un centro porcino, nos ha contratado para desarrollar una solución web que implemente el Modelo por Capas (Modelo Vista Controlador). La solución debe utilizar al menos una de las siguientes estructuras: `ARRAYLIST`, archivo, arreglo de objetos, o Base de Datos.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Contexto
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Actualmente, los procesos de registros y control de información en La Granja S.A. son muy manuales y se llevan a cabo a través de un archivo en MS Excel. El administrador solicita una aplicación web que facilite un mejor control sobre los datos y permita la generación de informes a través de vistas o tablas.
 
-## Learn More
+### Información a Manejar
 
-To learn more about Next.js, take a look at the following resources:
+La aplicación deberá gestionar información relacionada con:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Información sobre el porcino:**
+  - Identificación
+  - Raza (1-york, 2-hamp, 3-duroc)
+  - Edad
+  - Peso
+  - Alimentación
+  - Cliente
+  
+- **Información sobre el cliente:**
+  - Cédula
+  - Nombres
+  - Apellidos
+  - Dirección
+  - Teléfono
+  
+- **Información sobre alimentación:**
+  - Descripción
+  - Dosis
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Requerimientos
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. **Realizar el diagrama de clases.** (5 puntos)
+2. **Crear CRUD sobre la información referenciada anteriormente.** (20 puntos)
+3. **Desarrollar un reporte sobre clientes y porcinos.** (15 puntos)
+4. **Aprendizaje independiente.** (10 puntos)
