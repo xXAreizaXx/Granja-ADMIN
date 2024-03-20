@@ -6,17 +6,23 @@ import { useState } from "react";
 // Components
 import DialogComponent from "@/components/Dialog";
 
+// Custom Hook
+import useClients from "@/hooks/useClients";
+
 // Heroicons
 import { TrashIcon } from "@heroicons/react/24/outline";
 
-export default function BtnDeleteClient() {
+export default function BtnDeleteClient({ id }) {
+    // Hooks
+    const { handleDeleteClient } = useClients();
+
     // State
     const [open, setOpen] = useState(false);
 
     // Constants
     const btnConfirm = {
-        onClick: () => console.log("Delete Client"),
-        text: "Delete Client",
+        onClick: () => handleDeleteClient(id),
+        text: "Delete",
     };
     
     return (
@@ -31,7 +37,11 @@ export default function BtnDeleteClient() {
                 title="Delete Client"
                 type="delete"
             >
-                <h1 className="text-2xl font-bold">Delete Client</h1>
+                <div className="flex flex-col gap-2">
+                    <h3 className="text-md font-bold">
+                        Are you sure you want to delete this client?
+                    </h3>
+                </div>
             </DialogComponent>
         </>
     );

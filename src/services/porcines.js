@@ -14,7 +14,7 @@ export function createPorcine(data) {
 }
 
 export function updatePorcine(id, data) {
-    return api.put(`/porcines/${id}`, data);
+    return api.patch(`/porcines/${id}`, data);
 }
 
 export function deletePorcine(id) {

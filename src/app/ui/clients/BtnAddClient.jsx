@@ -6,6 +6,9 @@ import { useState } from "react";
 // Components
 import DialogComponent from "@/components/Dialog";
 
+// UI
+import FormAddClient from "./FormAddClient";
+
 // Heroicons
 import { PlusCircleIcon } from "@heroicons/react/24/outline";
 
@@ -15,7 +18,7 @@ export default function BtnAddClient() {
 
     const btnConfirm = {
         onClick: () => console.log("Add Client"),
-        text: "Create Client",
+        text: "Create",
     };
     
     return (
@@ -30,14 +33,16 @@ export default function BtnAddClient() {
                     Add Client
                 </button>
             </div>
+
             <DialogComponent
                 btnConfirm={btnConfirm}
+                hasBtns={false}
                 open={open}
                 setOpen={setOpen}
                 title="Create Client"
                 type="create"
             >
-                <h1 className="text-2xl font-bold">Create Client</h1>
+                <FormAddClient onCancel={() => setOpen(false)} />
             </DialogComponent>
         </>
     );

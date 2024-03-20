@@ -14,7 +14,7 @@ export function createFeed(data) {
 }
 
 export function updateFeed(id, data) {
-    return api.put(`/feeds/${id}`, data);
+    return api.patch(`/feeds/${id}`, data);
 }
 
 export function deleteFeed(id) {

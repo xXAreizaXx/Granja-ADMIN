@@ -6,10 +6,13 @@ import { useState } from "react";
 // Components
 import DialogComponent from "@/components/Dialog";
 
+// UI
+import FormEditFeed from "./FormEditFeed";
+
 // Heroicons
 import { PencilSquareIcon } from "@heroicons/react/24/outline";
 
-export default function BtnEditFeed() {
+export default function BtnEditFeed({ id, feed }) {
     // State
     const [open, setOpen] = useState(false);
 
@@ -25,12 +28,13 @@ export default function BtnEditFeed() {
             </button>
             <DialogComponent
                 btnConfirm={btnConfirm}
+                hasBtns={false}
                 open={open}
                 setOpen={setOpen}
                 title="Edit Feed"
                 type="edit"
             >
-                <h1 className="text-2xl font-bold">Edit Feed</h1>
+                <FormEditFeed id={id} feed={feed} onCancel={() => setOpen(false)} />
             </DialogComponent>
         </>
     );

@@ -14,7 +14,7 @@ export function createClient(data) {
 }
 
 export function updateClient(id, data) {
-    return api.put(`/clients/${id}`, data);
+    return api.patch(`/clients/${id}`, data);
 }
 
 export function deleteClient(id) {

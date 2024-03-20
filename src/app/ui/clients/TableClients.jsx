@@ -40,9 +40,9 @@ export default function TableClients() {
                         <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500 text-center">{client?.address}</td>
                         <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500 text-center">{client?.cellphone}</td>
                         <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500 gap-4 flex justify-center">
-                            <BtnViewClient />
-                            <BtnEditClient />
-                            <BtnDeleteClient />
+                            <BtnViewClient id={client?.id} />
+                            <BtnEditClient id={client?.id} client={client} />
+                            <BtnDeleteClient id={client?.id} />
                         </td>
                     </tr>
                 ))}

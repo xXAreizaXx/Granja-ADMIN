@@ -6,15 +6,21 @@ import { useState } from "react";
 // Components
 import DialogComponent from "@/components/Dialog";
 
+// Custom Hook
+import useClients from "@/hooks/useClients";
+
 // Heroicons
 import { InformationCircleIcon } from "@heroicons/react/24/outline";
 
-export default function BtnViewClient() {
+export default function BtnViewClient({ id }) {
+    // Hooks
+    const { client } = useClients(id);
+
     // State
     const [open, setOpen] = useState(false);
 
     const btnConfirm = {
-        onClick: () => console.log("View Client"),
+        onClick: () => setOpen(false),
         text: "View Client",
     };
     
@@ -30,7 +36,23 @@ export default function BtnViewClient() {
                 title="View Client"
                 type="view"
             >
-                <h1 className="text-2xl font-bold">View Client</h1>
+                <div className="flex flex-col gap-2">
+                    <h3 className="text-md font-bold">
+                        Name: <span className="text-black font-normal">{client?.name}</span>
+                    </h3>
+                    <h3 className="text-md font-bold">
+                        Last Name: <span className="text-black font-normal">{client?.lastName}</span>
+                    </h3>
+                    <h3 className="text-md font-bold">
+                        Document: <span className="text-black font-normal">{client?.document}</span>
+                    </h3>
+                    <h3 className="text-md font-bold">
+                        Address: <span className="text-black font-normal">{client?.address}</span>
+                    </h3>
+                    <h3 className="text-md font-bold">
+                        Cellphone: <span className="text-black font-normal">{client?.cellphone}</span>
+                    </h3>
+                </div>
             </DialogComponent>
         </>
     );

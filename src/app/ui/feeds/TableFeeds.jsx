@@ -38,7 +38,7 @@ export default function TableFeeds() {
                         <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500 text-center">{feed?.description}</td>
                         <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500 gap-4 flex justify-center">
                             <BtnViewFeed id={feed?.id} />
-                            <BtnEditFeed id={feed?.id} />
+                            <BtnEditFeed id={feed?.id} feed={feed} />
                             <BtnDeleteFeed id={feed?.id} />
                         </td>
                     </tr>

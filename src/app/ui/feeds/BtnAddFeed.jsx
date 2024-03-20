@@ -6,9 +6,11 @@ import { useState } from "react";
 // Components
 import DialogComponent from "@/components/Dialog";
 
+// UI
+import FormAddFeed from "./FormAddFeed";
+
 // Heroicons
 import { PlusCircleIcon } from "@heroicons/react/24/outline";
-import FormAddFeed from "./FormAddFeed";
 
 export default function BtnAddFeed() {
     // State
