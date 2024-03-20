@@ -21,7 +21,7 @@ export default function BtnViewClient({ id }) {
 
     const btnConfirm = {
         onClick: () => setOpen(false),
-        text: "View Client",
+        text: "Confirm",
     };
     
     return (

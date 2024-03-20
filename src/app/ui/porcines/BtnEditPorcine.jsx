@@ -6,16 +6,19 @@ import { useState } from "react";
 // Components
 import DialogComponent from "@/components/Dialog";
 
+// UI
+import FormEditPorcine from "./FormEditPorcine";
+
 // Heroicons
 import { PencilSquareIcon } from "@heroicons/react/24/outline";
 
-export default function BtnEditPorcine() {
+export default function BtnEditPorcine({ id, porcine }) {
     // State
     const [open, setOpen] = useState(false);
 
     const btnConfirm = {
         onClick: () => console.log("Edit porcine"),
-        text: "Edit porcine",
+        text: "Edit",
     };
     
     return (
@@ -25,12 +28,13 @@ export default function BtnEditPorcine() {
             </button>
             <DialogComponent
                 btnConfirm={btnConfirm}
+                hasBtns={false}
                 open={open}
                 setOpen={setOpen}
                 title="Edit Porcine"
                 type="edit"
             >
-                <h1 className="text-2xl font-bold">Edit Porcine</h1>
+                <FormEditPorcine id={id} porcine={porcine} onCancel={() => setOpen(false)} />
             </DialogComponent>
         </>
     );

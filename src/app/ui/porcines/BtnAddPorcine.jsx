@@ -6,6 +6,9 @@ import { useState } from "react";
 // Components
 import DialogComponent from "@/components/Dialog";
 
+// UI
+import FormAddPorcine from "./FormAddPorcine";
+
 // Heroicons
 import { PlusCircleIcon } from "@heroicons/react/24/outline";
 
@@ -32,12 +35,13 @@ export default function BtnAddPorcine() {
             </div>
             <DialogComponent
                 btnConfirm={btnConfirm}
+                hasBtns={false}
                 open={open}
                 setOpen={setOpen}
                 title="Create Porcine"
                 type="create"
             >
-                <h1 className="text-2xl font-bold">Create Porcine</h1>
+                <FormAddPorcine onCancel={() => setOpen(false)} />
             </DialogComponent>
         </>
     );

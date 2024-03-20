@@ -38,9 +38,9 @@ export default function TablePorcines() {
                         <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500 text-center">{porcine?.age} years</td>
                         <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500 text-center">{porcine?.weight} kg</td>
                         <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500 gap-4 flex justify-center">
-                            <BtnViewPorcine />
-                            <BtnEditPorcine />
-                            <BtnDeletePorcine />
+                            <BtnViewPorcine id={porcine?.id} />
+                            <BtnEditPorcine id={porcine?.id} porcine={porcine} />
+                            <BtnDeletePorcine id={porcine?.id} />
                         </td>
                     </tr>
                 ))}

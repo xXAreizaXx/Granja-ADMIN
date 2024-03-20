@@ -165,7 +165,7 @@ export default function FormEditClient({ id, client, onCancel }) {
                     type="submit"
                     className="bg-violet-700 hover:bg-violet-600 inline-flex w-full justify-center rounded-md px-3 py-2 text-sm font-semibold text-white shadow-sm sm:ml-3 sm:w-auto"
                 >
-                    Create
+                    Edit
                 </button>
             </div>
         </form>
